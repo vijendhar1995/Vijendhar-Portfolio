@@ -116,3 +116,14 @@ document.querySelectorAll(".sidebar ul li").forEach(item => {
     }
   });
 });
+
+// Ensure sidebar closes and scrolls to top on menu click (mobile)
+document.querySelectorAll(".sidebar ul li").forEach(item => {
+  item.addEventListener("click", () => {
+    const sidebar = document.querySelector(".sidebar");
+    if (window.innerWidth <= 768 && sidebar.classList.contains("active")) {
+      sidebar.classList.remove("active");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+});
