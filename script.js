@@ -198,3 +198,30 @@ setInterval(() => {
   greetIndex = (greetIndex + 1) % greetings.length;
   helloText.textContent = greetings[greetIndex];
 }, 700); // change every 2 seconds
+
+// star
+
+
+function createRandomSparkles(count = 20) {
+  const preloader = document.getElementById('preloader');
+
+  for (let i = 0; i < count; i++) {
+    const sparkle = document.createElement('div');
+    sparkle.classList.add('sparkle');
+
+    // Random position inside preloader
+    sparkle.style.top = `${Math.random() * 100}%`;
+    sparkle.style.left = `${Math.random() * 100}%`;
+
+    // Random delay to make sparkle loop at different times
+    sparkle.style.animationDelay = `${Math.random() * 3}s`;
+    sparkle.style.animationDuration = `${1.5 + Math.random() * 2}s`;
+
+    preloader.appendChild(sparkle);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  createRandomSparkles(25); // you can increase or decrease number
+});
+
