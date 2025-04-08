@@ -655,3 +655,86 @@ body {
     font-size: 14px;
   }
 }
+
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Proper alignment */
+.loader-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+/* Circle loader wraps exactly around image */
+.circle-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  border: 5px solid transparent;
+  border-top: 5px solid #3b82f6;
+  border-right: 5px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-sizing: border-box;
+}
+
+/* Image centered perfectly inside */
+.loader-image {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+}
+  
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hello-text {
+  margin-top: 170px;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Stencil Std', fantasy;
+  color: #3b3b3b;
+  text-align: center;
+  animation: fadeText 12s infinite;
+  position: absolute;
+  width: 100%;
+}
+
+@keyframes fadeText {
+  0%    { opacity: 0; }
+  5%    { opacity: 1; }
+  20%   { opacity: 1; }
+  25%   { opacity: 0; }
+  30%   { opacity: 0; }
+  35%   { opacity: 1; }
+  50%   { opacity: 1; }
+  55%   { opacity: 0; }
+  60%   { opacity: 0; }
+  65%   { opacity: 1; }
+  80%   { opacity: 1; }
+  85%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
