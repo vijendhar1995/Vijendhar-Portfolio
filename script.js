@@ -127,3 +127,21 @@ document.querySelectorAll(".sidebar ul li").forEach(item => {
     }
   });
 });
+
+
+// welcome
+
+window.addEventListener('DOMContentLoaded', () => {
+  const textElement = document.getElementById('animated-text');
+
+  // Wait 3 seconds, fade out, change text, then fade in
+  setTimeout(() => {
+    textElement.style.opacity = '0';
+
+    setTimeout(() => {
+      textElement.textContent = "Hello, I am Vijendhar Reddy";
+      textElement.style.opacity = '1';
+    }, 500); // fade-out duration
+  }, 3000); // delay before switching
+});
+
