@@ -134,15 +134,31 @@ document.querySelectorAll(".sidebar ul li").forEach(item => {
 window.addEventListener('DOMContentLoaded', () => {
   const textElement = document.getElementById('animated-text');
 
-  // Wait 3 seconds, fade out, change text, then fade in
+  // Step 1: Show "Welcome" (already showing)
   setTimeout(() => {
+    // Step 2: Fade out "Welcome"
     textElement.style.opacity = '0';
 
     setTimeout(() => {
-      textElement.textContent = "Hello, I am Vijendhar Reddy";
+      // Step 3: Show "Hello"
+      textElement.textContent = "Hello";
       textElement.style.opacity = '1';
+
+      // Step 4: After a while, fade out "Hello"
+      setTimeout(() => {
+        textElement.style.opacity = '0';
+
+        setTimeout(() => {
+          // Step 5: Show "I am Vijendhar Reddy"
+          textElement.textContent = "I am Vijendhar Reddy";
+          textElement.style.opacity = '1';
+        }, 500); // fade-out duration
+
+      }, 2000); // time to display "Hello"
+
     }, 500); // fade-out duration
-  }, 3000); // delay before switching
+
+  }, 3000); // initial "Welcome" duration
 });
 
 //preloader
