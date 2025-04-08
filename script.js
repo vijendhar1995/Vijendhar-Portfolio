@@ -145,3 +145,40 @@ window.addEventListener('DOMContentLoaded', () => {
   }, 3000); // delay before switching
 });
 
+//preloader
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    preloader.style.pointerEvents = 'none';
+    setTimeout(() => preloader.style.display = 'none', 500);
+  }, 3000);
+});
+
+
+const greetings = [
+  "Hello",        // English
+  "హలో",          // Telugu
+  "नमस्ते",        // Hindi
+  "Bonjour",      // French
+  "Hola",         // Spanish
+  "Ciao",         // Italian
+  "Hallo",        // German
+  "こんにちは",     // Japanese
+  "안녕하세요",      // Korean
+  "مرحبا",         // Arabic
+  "வணக்கம்",        // Tamil
+  "Olá",          // Portuguese
+  "Salam",        // Persian
+];
+
+let greetIndex = 0;
+const helloText = document.getElementById("helloText");
+
+setInterval(() => {
+  greetIndex = (greetIndex + 1) % greetings.length;
+  helloText.textContent = greetings[greetIndex];
+}, 700); // change every 2 seconds
