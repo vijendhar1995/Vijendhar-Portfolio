@@ -95,6 +95,15 @@ body {
   font-family: 'Stencil Std', fantasy;
 }
 
+.intro-text {
+  position: relative;
+  height: 60px; /* adjust if needed */
+}
+
+#animated-text {
+  transition: opacity 0.5s ease-in-out;
+}
+
 /* About Me */
 .about-me {
   margin-top: 30px;
