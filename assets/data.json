@@ -1,5 +1,11 @@
 [
     {
+        "question": "explain the difference between a Work Object and a Case in Pega?",
+        "answer": "a Work Object is the legacy term used in earlier versions to represent a unit of work, while a Case is the modern equivalent introduced with enhanced Case Management features starting from Pega 7. Although both refer to the same underlying concept—tracking and managing a piece of work through its lifecycle—the term "Case" offers a more structured, business-friendly approach. It supports visual lifecycle modeling with stages and steps, sub-cases (parent-child relationships), and greater automation and integration capabilities. Essentially, a Case is an evolved and more powerful version of a Work Object, aligning with Pega’s shift toward intuitive, model-driven application development.",
+        "attachment": null,
+        "timestamp": "2025-04-04 15:15:04"
+    },
+    {
         "question": "How to delete/ remove data page from clipboard?",
         "answer": "There are like couple of way we can remove data page by \r\n1. Activity method : Page-Remove\r\n2. Data Trasform : pxClearAllInstancesOfDataPage, this again calls a OOTB function \"pzDeleteAllInstancesOfDeclartivePages\" pass param.DataPage.\r\n3. Activity: pzFlushDatapage",
         "attachment": null,
@@ -29,4 +35,5 @@
         "attachment": null,
         "timestamp": "2025-04-05 16:33:48"
     }
+    
 ]
