@@ -1,9 +1,9 @@
 [
     {
-        "question": "explain the difference between a Work Object and a Case in Pega?",
-        "answer": "a Work Object is the legacy term used in earlier versions to represent a unit of work, while a Case is the modern equivalent introduced with enhanced Case Management features starting from Pega 7. Although both refer to the same underlying concept—tracking and managing a piece of work through its lifecycle—the term "Case" offers a more structured, business-friendly approach. It supports visual lifecycle modeling with stages and steps, sub-cases (parent-child relationships), and greater automation and integration capabilities. Essentially, a Case is an evolved and more powerful version of a Work Object, aligning with Pega’s shift toward intuitive, model-driven application development.",
+        "question": " Explain the difference between a Work Object and a Case in Pega?",
+        "answer": "a Work Object is the legacy term used in earlier versions to represent a unit of work, while a Case is the modern equivalent introduced with enhanced Case Management features starting from Pega 7. Although both refer to the same underlying concept\u2014tracking and managing a piece of work through its lifecycle\u2014the term \"Case\" offers a more structured, business-friendly approach. It supports visual lifecycle modeling with stages and steps, sub-cases (parent-child relationships), and greater automation and integration capabilities. Essentially, a Case is an evolved and more powerful version of a Work Object, aligning with Pega\u2019s shift toward intuitive, model-driven application development.",
         "attachment": null,
-        "timestamp": "2025-04-04 13:05:44"
+        "timestamp": "2025-04-04 16:59:54"
     },
     {
         "question": "How to delete/ remove data page from clipboard?",
