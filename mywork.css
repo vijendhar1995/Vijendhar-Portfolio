@@ -86,3 +86,8 @@
     font-size: 1.6rem;
   }
 }
+.linkedin-wrapper iframe {
+  width: 100% !important;
+  border-radius: 12px;
+}
+
