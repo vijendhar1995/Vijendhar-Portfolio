@@ -1,0 +1,88 @@
+/* ================================
+   My Work Section Styles (mywork.css)
+   ================================ */
+
+#mywork {
+  padding: 2.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mywork-title {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.mywork-intro {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+/* Video Grid Layout */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Video Card */
+.video-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 1rem 1rem 1.3rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Responsive Video Wrapper (16:9) */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.9rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Titles & Text */
+.video-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.video-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  #mywork {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .mywork-title {
+    font-size: 1.6rem;
+  }
+}
