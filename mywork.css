@@ -22,49 +22,50 @@
 }
 
 /* ================================
-   Grid Layout
+   Grid Layout – FIXED SPACING
    ================================ */
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row on desktop */
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 2.5rem; /* More space between cards */
+  row-gap: 3rem; /* Extra vertical spacing */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* ================================
-   Video / Card Styles
+   Video Card Styling
    ================================ */
 
 .video-card {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
-  padding: 1rem 1rem 1.3rem;
+  padding: 1.3rem;
+  padding-bottom: 2rem; /* extra spacing at bottom */
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
-  width: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .video-card:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: translateY(-6px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
   border-color: rgba(255, 255, 255, 0.22);
 }
 
-/* Responsive 16:9-ish wrapper, slightly taller to feel bigger */
+/* ================================
+   Video Iframe Wrapper
+   ================================ */
+
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 60%; /* controls height of iframe area */
+  padding-top: 62%; /* height of video area */
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.2rem; /* spacing between video and text */
 }
 
 .video-wrapper iframe {
@@ -75,15 +76,18 @@
   border: 0;
 }
 
-/* LinkedIn specific tweaks (optional) */
+/* LinkedIn Iframe Fix */
 .linkedin-wrapper iframe {
   width: 100% !important;
   border-radius: 12px;
 }
 
-/* Titles & Text */
+/* ================================
+   Title & Desc
+   ================================ */
+
 .video-title {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   margin-bottom: 0.4rem;
   font-weight: 600;
 }
@@ -95,24 +99,19 @@
 }
 
 /* ================================
-   Responsive Breakpoints
+   Responsive Fixes
    ================================ */
 
-/* Tablet and below – 1 per row */
 @media (max-width: 900px) {
-  #mywork {
-    padding: 2rem 1.5rem;
-  }
-
   .video-grid {
     grid-template-columns: 1fr; /* 1 per row */
+    gap: 2rem;
   }
 }
 
-/* Small mobile tweaks */
 @media (max-width: 600px) {
   #mywork {
-    padding: 1.8rem 1.1rem;
+    padding: 1.8rem 1rem;
   }
 
   .mywork-title {
@@ -120,6 +119,10 @@
   }
 
   .video-wrapper {
-    padding-top: 65%; /* a bit taller for narrow screens */
+    padding-top: 68%; /* taller for mobile */
+  }
+
+  .video-card {
+    padding-bottom: 2.4rem;
   }
 }
