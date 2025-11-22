@@ -28,7 +28,7 @@
 .video-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 per row */
-  gap: 2.5rem; /* More space between cards */
+  gap: 4.5rem; /* More space between cards */
   row-gap: 3rem; /* Extra vertical spacing */
   max-width: 1200px;
   margin: 0 auto;
